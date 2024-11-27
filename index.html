@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отслеживание грузов</title>
+  <link href="library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Отслеживание грузов</h1>
+    <form id="addCargoForm">
+      <div class="mb-3">
+        <label for="cargoName" class="form-label">Название груза</label>
+        <input type="text" id="cargoName" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="origin" class="form-label">Пункт отправления</label>
+        <input type="text" id="origin" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="destination" class="form-label">Пункт назначения</label>
+        <input type="text" id="destination" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="departureDate" class="form-label">Дата отправления</label>
+        <input type="date" id="departureDate" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Добавить груз</button>
+    </form>
+
+    <div class="mt-3">
+      <label for="statusFilter" class="form-label">Фильтр по статусу</label>
+      <select id="statusFilter" class="form-select">
+        <option value="">Все</option>
+        <option value="В пути">В пути</option>
+        <option value="Ожидает отправки">Ожидает отправки</option>
+        <option value="Доставлен">Доставлен</option>
+      </select>
+    </div>
+
+    <table class="table table-striped mt-3" id="cargoTable">
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Название</th>
+          <th>Статус</th>
+          <th>Пункт отправления</th>
+          <th>Пункт назначения</th>
+          <th>Дата отправления</th>
+          <th>Удалить</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="library/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="database/cargoData.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+#cargoTable td {
+    vertical-align: middle;
+  }
+  
+  .status-select {
+    width: 100%;
+  }
+  
+  .status-Ozhidayet {
+    background-color: yellow;
+  }
+  
+  .status-V-puti {
+    background-color: blue;
+    color: white;
+  }
+  
+  .status-Dostavlen {
+    background-color: green;
+    color: white;
+  }
+  
